@@ -1,0 +1,140 @@
+---
+import BookSection from '../components/BookSection.astro';
+import Callout from '../components/Callout.astro';
+import CircularComponents from '../components/CircularComponents.astro';
+
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image, Picture } from '@astrojs/image/components';
+
+---
+
+<Layout title="Welcome to 8bytes">
+	<main>
+	
+	<Header image="url(/images/sam-moghadam-khamseh-KJ241ZAOYwU-unsplash.jpg)" mainTitle="Welcome to 8bytes" specialTitle="" tagline="We build web/mobile apps that scale at affordable pricing"/>
+
+		<Callout/>
+
+		<section id="about">
+			<div class="overlay"></div>
+			<div class="content">
+				<h3 class="bold">About</h3>
+			<p class="bold">
+				We are an innovative software company, based in Accra, Ghana. 
+				We build software that scale with your business processes. 
+			</p>
+			
+
+			</div>
+			<div class="section-footer">
+				<a href="/about">
+					<svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="50" height="39" fill="black"/>
+						<path d="M30.43 12.93L36.5 19L30.43 25.07M19.5 19H36.33" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						
+					</a>
+			</div>
+		</section>
+
+
+		<section id="index-services">
+			<div class="section-image">
+				<Image width={100} height={80} alt="services-abstract-image" src={'/images/sam-moghadam-khamseh-VwHzE0aFQfY-unsplash.jpg'}/>
+				
+			</div>
+			<div class="content light">
+				<h3>What we do</h3>
+				<p>
+					Our sole aim is to provide you with quality web/mobile apps for your business using modern-day cutting-edge technologies.
+				</p>
+			</div>
+		
+			<div class="section-footer">
+				<a href="/services">
+					<svg width="50" height="39" viewBox="0 0 50 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="50" height="39" fill="#0EC0DD" fill-opacity="0.9"/>
+						<path d="M27.43 13.93L33.5 20L27.43 26.07M16.5 20H33.33" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						
+					</a>
+			</div>
+		</section>
+
+		<div class="">
+			<CircularComponents  heading="Core Values"/>
+		</div>
+
+	
+
+<BookSection/>
+
+	</main>
+
+	<Footer/>
+</Layout>
+
+
+<style>
+	.content h3{
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	section#index-services{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.25rem;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+	min-height: 220px;
+}
+
+section#index-services .content{
+	font-size: 14px;
+
+}
+
+section#about{
+	min-height: 340px;
+	margin-bottom: 10px;
+	padding: 20px 0;
+
+}
+
+section#about .overlay{
+    width: 100%;
+    min-height: inherit;
+    position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    top:0;
+    left: 0;
+    background-color: rgba(14, 192, 221, 0.82);
+    z-index: 1000;
+
+}
+
+section#about{
+	background-image:url('../src/images/bradley-jasper-ybanez-a1xlQq3HoJ0-unsplash.jpg');
+}
+
+section#about .content{
+    color: white;
+    z-index: 2000;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+</style>
+
