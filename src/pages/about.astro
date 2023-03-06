@@ -1,0 +1,98 @@
+---
+import BookSection from '../components/BookSection.astro';
+import Callout from '../components/Callout.astro';
+import CircularComponents from '../components/CircularComponents.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image, Picture } from '@astrojs/image/components';
+
+---
+
+<Layout title="Welcome to TechExpress.">
+	<main>
+	
+	<Header image="url(/images/tyler-lastovich-3shfnfzdFVc-unsplash.jpg)" mainTitle="We are a Software Company" specialTitle="" tagline="We express your business processes through quality software"/>
+
+		<Callout/>
+
+		<section id="who-we-are">
+            <div class="section-image">
+                <Image width={200} height={382} alt="services-abstract-image" src={'/images/andreas-forsberg-R_GN1I76XjM-unsplash.jpg'}/>
+            </div>
+            <div class="content">
+                <h3>Who we are</h3>
+                <p>
+                    At 8bytes in Accra, we are a team of software experts dedicated to building custom web and mobile applications that transform your business. Choose 8bytes and experience the difference.
+                </p>
+            </div>
+		</section>
+
+		    <CircularComponents heading="Core Values"/>
+	
+        <section id="about-detail">
+			<p>
+				We are more than just a software company - we are your partner in innovation. Our team of experienced developers, project managers, and designers work closely with you to understand your unique needs and deliver tailored solutions that meet your objectives.</p> 
+                
+            <p style="margin-top:10px"> At 8bytes, we specialize in mobile app development, web app development, and desktop development. We use modern technologies and agile methodologies to ensure high-quality and timely delivery, every time. Let us help you take your business to the next level with our expert services.
+
+            </p>
+		</section>
+
+<BookSection/>
+
+	</main>
+
+	<Footer/>
+</Layout>
+
+
+
+
+<style>
+    section#who-we-are h3{
+        font-weight: 400;
+        margin-top:-25px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    section#who-we-are{
+    min-width: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    margin-bottom: -8px;
+   
+    
+    
+    }
+
+    section#who-we-are .content{
+        padding: 20px;
+        line-height: 1.4;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    ul{
+        padding: 10px;
+        list-style: none;
+        margin:0;
+        padding: 0;
+        
+    }
+
+    ul li {
+        font-size: 22px;
+    }
+
+    section#about-detail{
+        font-weight: 200;
+        padding: 1.5rem;
+        background-color: rgba(234, 230, 230, 0.82);
+     
+    }
+</style>
+
